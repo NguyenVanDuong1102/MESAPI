@@ -216,48 +216,43 @@ namespace MES.Controllers
                     return Ok(new Output { Code = "1", Message = strRES });
                 }
 
-                string query = "SELECT ID ,DATE_TIME,PUSH_STATUS FROM TIMEKEEPING_DATA where PUSH_STATUS is null";
+               // string query = "SELECT ID ,DATE_TIME,PUSH_STATUS FROM TIMEKEEPING_DATA where PUSH_STATUS is null";
                
                 SqlDB sqlDB = new SqlDB(strConn);
-                dt = sqlDB.ExecuteDataTable(query);
+                //dt = sqlDB.ExecuteDataTable(query);
               
-                strSchema = (strDB.Substring(0, 2) == "AP") ? "MES4" : "SFISM4";
-                Assembly assembly = Assembly.GetExecutingAssembly();
-                FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
-                float versionOnWeb = Convert.ToInt64(fvi.FileVersion.Replace(".", ""));
-                dt = sqlDB.ExecuteDataTable("SELECT AP_VERSION FROM " + strSchema + ".AMS_AP WHERE AP_NAME = 'MESAPI'");
-                if (dt.Rows.Count == 0)
-                {
-                    strRES = "The MESAPI not exist on AMS system. Please call IT check!";
-                    return Ok(new Output { Code = "1", Message = strRES });
-                }
+                //strSchema = (strDB.Substring(0, 2) == "AP") ? "MES4" : "SFISM4";
+                //Assembly assembly = Assembly.GetExecutingAssembly();
+                //FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
+                //float versionOnWeb = Convert.ToInt64(fvi.FileVersion.Replace(".", ""));
+                //dt = sqlDB.ExecuteDataTable("SELECT AP_VERSION FROM " + strSchema + ".AMS_AP WHERE AP_NAME = 'MESAPI'");
+                //if (dt.Rows.Count == 0)
+                //{
+                //    strRES = "The MESAPI not exist on AMS system. Please call IT check!";
+                //    return Ok(new Output { Code = "1", Message = strRES });
+                //}
 
-                float versionOnDB = Convert.ToInt64(dt.Rows[0][0].ToString().Replace(".", ""));
-                if (versionOnWeb < versionOnDB)
-                {
-                    strRES = "MESAPI version on server (" + fvi.FileVersion + ") < version on AMS system (" + dt.Rows[0][0].ToString() + "). Please call IT to update MESAPI latest version!";
-                    return Ok(new Output { Code = "1", Message = strRES });
-                }
+                //float versionOnDB = Convert.ToInt64(dt.Rows[0][0].ToString().Replace(".", ""));
+                //if (versionOnWeb < versionOnDB)
+                //{
+                //    strRES = "MESAPI version on server (" + fvi.FileVersion + ") < version on AMS system (" + dt.Rows[0][0].ToString() + "). Please call IT to update MESAPI latest version!";
+                //    return Ok(new Output { Code = "1", Message = strRES });
+                //}
 
-                dt = sqlDB.ExecuteDataTable("SELECT * FROM ALL_OBJECTS WHERE OBJECT_TYPE = 'PROCEDURE' AND OWNER = '" + strSP.Split('.')[0] + "' AND OBJECT_NAME = '" + strSP.Split('.')[1] + "'");
+                dt = sqlDB.ExecuteDataTable("SELECT *FROM sys.objects where schema_id='5' and name= '" + strSP.Split('.')[1] + "' and type_desc='SQL_STORED_PROCEDURE'");
                 if (dt.Rows.Count == 0)
                 {
                     strRES = "IN_SP error: The SP: (" + strSP.ToUpper() + ") not exist on DB. Please call IT check!";
                     return Ok(new Output { Code = "1", Message = strRES });
                 }
-                if (dt.Rows[0]["STATUS"].ToString().ToUpper() != "VALID")
-                {
-                    strRES = "IN_SP error: The SP: (" + strSP.ToUpper() + ") invalid. Please call IT check!";
-                    return Ok(new Output { Code = "1", Message = strRES });
-                }
-
-                htSP.Add("IN_EVENT", strIN_EVENT);
-                htSP.Add("IN_DATA", strIN_DATA);
-                htSP.Add("RES", "");
-                htSP.Add("RES_TABLE", "");
+               
+                htSP.Add("@IN_EVENT", strIN_EVENT);
+                htSP.Add("@IN_DATA", strIN_DATA);
+                htSP.Add("@RES", "");
+                htSP.Add("@RES_TABLE", "");
                 htSP = sqlDB.ExecuteSPReturnHashtable(strSP, htSP);
-                strRES = htSP["RES"].ToString();
-                return Ok(new Output { Code = "1", Message = strRES, Data = (DataTable)htSP["RES_TABLE"] });
+                strRES = htSP["@RES"].ToString();
+                return Ok(new Output { Code = "1", Message = strRES, Data = (DataTable)htSP["@RES_TABLE"] });
             }
             catch (Exception ex)
             {

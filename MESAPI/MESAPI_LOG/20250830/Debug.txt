@@ -1,0 +1,165 @@
+2025/08/30 10:11:19: MES1.MES_AP
+- IN_EVENT: LOGIN
+- IN_DATA: 49768               1 
+=> RES: IN_SP error: The SP: (MES1.MES_AP) not exist on DB. Please call IT check!
+-------------------------------------
+2025/08/30 10:17:16: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 49768               1 
+=> RES: Exception on MESAPI CallAPI: Object reference not set to an instance of an object.
+-------------------------------------
+2025/08/30 10:17:16: MES1.EXCEPTION_SEND_MAIL
+- IN_EVENT: LOGIN
+- IN_DATA: Debug               MES1.MES_CORE                                     http://localhost:8181/api/MES/CallAPI                                                                                                                                                                   192.168.1.3                                                                                                                                                                                             Exception on MESAPI CallAPI: Object reference not set to an instance of an object.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      {
+  "IN_EVENT": "LOGIN",
+  "IN_DATA": "49768               1 ",
+  "IN_DB": "LGG",
+  "IN_SP": "MES1.MES_CORE"
+}
+=> RES: MES1.EXCEPTION_SEND_MAIL Exception: Invalid object name 'ALL_OBJECTS'.
+-------------------------------------
+2025/08/30 10:19:31: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 49768               1 
+=> RES: Exception on MESAPI CallAPI: Item has already been added. Key in dictionary: '@IN_EVENT'  Key being added: '@IN_EVENT'
+-------------------------------------
+2025/08/30 10:19:31: MES1.EXCEPTION_SEND_MAIL
+- IN_EVENT: LOGIN
+- IN_DATA: Debug               MES1.MES_CORE                                     http://localhost:8181/api/MES/CallAPI                                                                                                                                                                   192.168.1.3                                                                                                                                                                                             Exception on MESAPI CallAPI: Item has already been added. Key in dictionary: '@IN_EVENT'  Key being added: '@IN_EVENT'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  {
+  "IN_EVENT": "LOGIN",
+  "IN_DATA": "49768               1 ",
+  "IN_DB": "LGG",
+  "IN_SP": "MES1.MES_CORE"
+}
+=> RES: MES1.EXCEPTION_SEND_MAIL Exception: Invalid object name 'ALL_OBJECTS'.
+-------------------------------------
+2025/08/30 10:20:32: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 49768               1 
+=> RES: MẬT KHẨU HOẶC TÀI KHOẢN SAI
+-------------------------------------
+2025/08/30 10:21:20: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 49768               1 
+=> RES: OK ÐANG NH?P THÀNH CÔNG 
+-------------------------------------
+2025/08/30 10:22:38: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 49768               1 
+=> RES: OK ÐANG NH?P THÀNH CÔNG 
+-------------------------------------
+2025/08/30 10:33:41: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 49768               1 
+=> RES: OK ÐANG NH?P THÀNH CÔNG 
+-------------------------------------
+2025/08/30 10:34:34: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 49768               1 
+=> RES: OK ÐANG NH?P THÀNH CÔNG 
+-------------------------------------
+2025/08/30 10:42:30: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 49768               1 
+=> RES: OK ÐANG NH?P THÀNH CÔNG 
+-------------------------------------
+2025/08/30 10:44:12: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 49768               1 
+=> RES: OK ÐANG NH?P THÀNH CÔNG 
+-------------------------------------
+2025/08/30 10:44:27: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 49768               1 
+=> RES: OK ÐANG NH?P THÀNH CÔNG 
+-------------------------------------
+2025/08/30 10:52:47: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 49768               1 
+=> RES: OK ÐANG NH?P THÀNH CÔNG 
+-------------------------------------
+2025/08/30 10:56:45: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 1 49768               1 
+=> RES: Exception on MESAPI CallAPI: Exception in MES1.MES_CORE :Cannot find table 0.
+-------------------------------------
+2025/08/30 10:56:45: MES1.EXCEPTION_SEND_MAIL
+- IN_EVENT: LOGIN
+- IN_DATA: Debug               MES1.MES_CORE                                     http://localhost:8181/api/MES/CallAPI                                                                                                                                                                   192.168.1.3                                                                                                                                                                                             Exception on MESAPI CallAPI: Exception in MES1.MES_CORE :Cannot find table 0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           {
+  "IN_EVENT": "LOGIN",
+  "IN_DATA": "1 49768               1 ",
+  "IN_DB": "LGG",
+  "IN_SP": "MES1.MES_CORE"
+}
+=> RES: MES1.EXCEPTION_SEND_MAIL Exception: Invalid object name 'ALL_OBJECTS'.
+-------------------------------------
+2025/08/30 10:57:22: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 1 49768               1 
+=> RES: Exception on MESAPI CallAPI: Exception in MES1.MES_CORE :Cannot find table 0.
+-------------------------------------
+2025/08/30 10:57:22: MES1.EXCEPTION_SEND_MAIL
+- IN_EVENT: LOGIN
+- IN_DATA: Debug               MES1.MES_CORE                                     http://localhost:8181/api/MES/CallAPI                                                                                                                                                                   192.168.1.3                                                                                                                                                                                             Exception on MESAPI CallAPI: Exception in MES1.MES_CORE :Cannot find table 0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           {
+  "IN_EVENT": "LOGIN",
+  "IN_DATA": "1 49768               1 ",
+  "IN_DB": "LGG",
+  "IN_SP": "MES1.MES_CORE"
+}
+=> RES: MES1.EXCEPTION_SEND_MAIL Exception: Invalid object name 'ALL_OBJECTS'.
+-------------------------------------
+2025/08/30 10:58:46: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 1 49768               1 
+=> RES: Exception on MESAPI CallAPI: Exception in MES1.MES_CORE :Cannot find table 0.
+-------------------------------------
+2025/08/30 10:58:46: MES1.EXCEPTION_SEND_MAIL
+- IN_EVENT: LOGIN
+- IN_DATA: Debug               MES1.MES_CORE                                     http://localhost:8181/api/MES/CallAPI                                                                                                                                                                   192.168.1.3                                                                                                                                                                                             Exception on MESAPI CallAPI: Exception in MES1.MES_CORE :Cannot find table 0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           {
+  "IN_EVENT": "LOGIN",
+  "IN_DATA": "1 49768               1 ",
+  "IN_DB": "LGG",
+  "IN_SP": "MES1.MES_CORE"
+}
+=> RES: MES1.EXCEPTION_SEND_MAIL Exception: Invalid object name 'ALL_OBJECTS'.
+-------------------------------------
+2025/08/30 11:02:36: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 1 49768               1 
+=> RES: Exception on MESAPI CallAPI: Exception in MES1.MES_CORE :Invalid object name 'dual'.
+-------------------------------------
+2025/08/30 11:02:36: MES1.EXCEPTION_SEND_MAIL
+- IN_EVENT: LOGIN
+- IN_DATA: Debug               MES1.MES_CORE                                     http://localhost:8181/api/MES/CallAPI                                                                                                                                                                   192.168.1.3                                                                                                                                                                                             Exception on MESAPI CallAPI: Exception in MES1.MES_CORE :Invalid object name 'dual'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    {
+  "IN_EVENT": "LOGIN",
+  "IN_DATA": "1 49768               1 ",
+  "IN_DB": "LGG",
+  "IN_SP": "MES1.MES_CORE"
+}
+=> RES: MES1.EXCEPTION_SEND_MAIL Exception: Invalid object name 'ALL_OBJECTS'.
+-------------------------------------
+2025/08/30 11:03:28: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 1 49768               1 
+=> RES: MẬT KHẨU HOẶC TÀI KHOẢN SAI
+-------------------------------------
+2025/08/30 11:04:53: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 1 49768               1 
+=> RES: MẬT KHẨU HOẶC TÀI KHOẢN SAI
+-------------------------------------
+2025/08/30 11:05:31: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 1 49768               1 
+=> RES: MẬT KHẨU HOẶC TÀI KHOẢN SAI
+-------------------------------------
+2025/08/30 11:12:21: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 49768               1 
+=> RES: OK ĐĂNG NHẬP THÀNH CÔNG 
+-------------------------------------
+2025/08/30 11:14:00: MES1.MES_CORE
+- IN_EVENT: LOGIN
+- IN_DATA: 49768               1 
+=> RES: OK ĐĂNG NHẬP THÀNH CÔNG 
+-------------------------------------
